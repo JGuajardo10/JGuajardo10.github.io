@@ -53,25 +53,22 @@ document.addEventListener('DOMContentLoaded', function() {
     themeToggle.addEventListener('click', toggleTheme);
 
     function updateNavbarBackground() {
-        const currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
-        const isDark = currentTheme === 'dark';
-        
         if (window.scrollY > 100) {
-            navbar.style.background = isDark ? 'rgba(17, 24, 39, 0.98)' : 'rgba(255, 255, 255, 0.98)';
-            navbar.style.boxShadow = '0 4px 6px -1px rgba(0, 0, 0, 0.1)';
+            navbar.classList.add('scrolled');
         } else {
-            navbar.style.background = isDark ? 'rgba(17, 24, 39, 0.95)' : 'rgba(255, 255, 255, 0.95)';
-            navbar.style.boxShadow = 'none';
+            navbar.classList.remove('scrolled');
         }
     }
 
     window.addEventListener('scroll', updateNavbarBackground);
     
-    // Update navbar background when theme changes
+    // Update navbar when theme changes
     const originalToggleTheme = toggleTheme;
     toggleTheme = function() {
         originalToggleTheme();
-        setTimeout(updateNavbarBackground, 0);
+        // Remove any inline styles that might conflict
+        navbar.style.background = '';
+        navbar.style.boxShadow = '';
     };
 
     const observerOptions = {
