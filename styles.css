@@ -111,6 +111,7 @@ body {
     display: flex;
     list-style: none;
     gap: 2rem;
+    background: transparent;
 }
 
 .nav-link {
@@ -240,12 +241,12 @@ body {
 
 /* Dark mode nav menu - match navbar background */
 [data-theme="dark"] .nav-menu {
-    background-color: rgba(17, 24, 39, 0.95);
+    background-color: rgba(17, 24, 39, 0.95) !important;
 }
 
 /* Dark mode nav menu when navbar is scrolled */
 [data-theme="dark"] .navbar.scrolled .nav-menu {
-    background-color: rgba(17, 24, 39, 0.98);
+    background-color: rgba(17, 24, 39, 0.98) !important;
 }
 
 /* Dark mode footer */
@@ -1097,7 +1098,7 @@ section {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: white;
+        background-color: rgba(255, 255, 255, 0.95);
         width: 100%;
         text-align: center;
         transition: var(--transition);
@@ -1105,6 +1106,7 @@ section {
         padding: 2rem 0;
         max-height: calc(100vh - 70px);
         overflow-y: auto;
+        backdrop-filter: blur(10px);
     }
     
     .nav-item {
