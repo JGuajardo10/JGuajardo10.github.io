@@ -184,6 +184,101 @@ body {
     background: linear-gradient(135deg, #1f2937 0%, #111827 100%);
 }
 
+/* Dark mode card styles */
+[data-theme="dark"] .skill-item,
+[data-theme="dark"] .experience-card,
+[data-theme="dark"] .education-card,
+[data-theme="dark"] .personal-card {
+    background: var(--surface);
+    border-color: var(--border);
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .skill-item:hover,
+[data-theme="dark"] .experience-card:hover,
+[data-theme="dark"] .education-card:hover,
+[data-theme="dark"] .personal-card:hover {
+    background: #374151;
+}
+
+/* Dark mode project items */
+[data-theme="dark"] .project-item {
+    background: #374151;
+    border-left-color: var(--primary-color);
+}
+
+[data-theme="dark"] .project-tech {
+    background: var(--surface);
+    color: var(--primary-color);
+}
+
+/* Dark mode navbar */
+[data-theme="dark"] .navbar {
+    background: rgba(17, 24, 39, 0.95);
+    border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .nav-menu {
+    background-color: var(--surface);
+}
+
+/* Dark mode footer */
+[data-theme="dark"] .footer {
+    background: #0f172a;
+}
+
+/* Dark mode text and headings */
+[data-theme="dark"] .card-header h3,
+[data-theme="dark"] .personal-card h3,
+[data-theme="dark"] .education-card h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .card-description,
+[data-theme="dark"] .personal-card p,
+[data-theme="dark"] .education-card p {
+    color: var(--text-secondary);
+}
+
+/* Dark mode lists */
+[data-theme="dark"] .coursework-list li,
+[data-theme="dark"] .responsibilities-list li,
+[data-theme="dark"] .skill-category li {
+    color: var(--text-secondary);
+    border-bottom-color: var(--border);
+}
+
+[data-theme="dark"] .achievement-item,
+[data-theme="dark"] .project-item p {
+    color: var(--text-secondary);
+}
+
+/* Dark mode section backgrounds */
+[data-theme="dark"] .about,
+[data-theme="dark"] .personal {
+    background: var(--background);
+}
+
+/* Dark mode contact links */
+[data-theme="dark"] .contact-link {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .contact-link:hover {
+    color: var(--primary-color);
+}
+
+/* Dark mode tags */
+[data-theme="dark"] .tag {
+    background: var(--border);
+    color: var(--text-primary);
+}
+
+/* Dark mode profile photo border */
+[data-theme="dark"] .profile-photo {
+    border-color: var(--border);
+}
+
 .hero::before {
     content: '';
     position: absolute;
@@ -343,6 +438,7 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center 20%;
     border-radius: 50%;
     transition: var(--transition);
 }
