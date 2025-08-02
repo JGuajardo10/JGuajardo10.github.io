@@ -238,9 +238,14 @@ body {
     color: var(--primary-color);
 }
 
-/* Dark mode nav menu */
+/* Dark mode nav menu - match navbar background */
 [data-theme="dark"] .nav-menu {
-    background-color: var(--surface);
+    background-color: rgba(17, 24, 39, 0.95);
+}
+
+/* Dark mode nav menu when navbar is scrolled */
+[data-theme="dark"] .navbar.scrolled .nav-menu {
+    background-color: rgba(17, 24, 39, 0.98);
 }
 
 /* Dark mode footer */
