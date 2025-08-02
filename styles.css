@@ -279,6 +279,64 @@ body {
     border-color: var(--border);
 }
 
+/* Additional dark mode text fixes */
+[data-theme="dark"] .about-description {
+    color: var(--text-secondary);
+}
+
+[data-theme="dark"] .skills h3 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .university-name,
+[data-theme="dark"] .company-name {
+    color: var(--primary-color);
+}
+
+[data-theme="dark"] .date {
+    color: var(--text-light);
+}
+
+[data-theme="dark"] .skill-category h4,
+[data-theme="dark"] .project-header h4 {
+    color: var(--text-primary);
+}
+
+[data-theme="dark"] .contact-text p {
+    color: var(--text-secondary);
+}
+
+/* Dark mode specific overrides for white backgrounds */
+[data-theme="dark"] .skill-item {
+    background: var(--surface) !important;
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .experience-card,
+[data-theme="dark"] .education-card,
+[data-theme="dark"] .personal-card {
+    background: var(--surface) !important;
+}
+
+[data-theme="dark"] .experience-card *,
+[data-theme="dark"] .education-card *,
+[data-theme="dark"] .personal-card *,
+[data-theme="dark"] .skill-item * {
+    color: inherit;
+}
+
+[data-theme="dark"] .experience-card h3,
+[data-theme="dark"] .education-card h3,
+[data-theme="dark"] .personal-card h3 {
+    color: var(--text-primary) !important;
+}
+
+[data-theme="dark"] .experience-card p,
+[data-theme="dark"] .education-card p,
+[data-theme="dark"] .personal-card p {
+    color: var(--text-secondary) !important;
+}
+
 .hero::before {
     content: '';
     position: absolute;
